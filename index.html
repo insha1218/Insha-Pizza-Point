@@ -1,1 +1,148 @@
 
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Insha Pizza Point - Lucky Number</title>
+<style>
+body{margin:0;font-family:Arial;background:#0a0a0a;color:#fff;text-align:center;overflow-x:hidden}
+.top{background:#FFD700;padding:8px;position:sticky;top:0;z-index:100}
+.top a{background:#000;color:#FFD700;padding:6px 10px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:800;margin:2px;display:inline-block}
+h1{color:#FFD700;font-size:19px}
+h3{color:#FFD700}
+.card{background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:10px;margin:8px auto;max-width:920px;text-align:left;display:flex;gap:10px;align-items:center}
+.card img{width:80px;height:80px;object-fit:cover;border-radius:8px}
+.card b{font-size:13px}
+.card span{font-size:11px;color:#888}
+.price{color:#FFD700;font-weight:bold}
+.obtn{background:#FFD700;color:#000;border:none;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:bold;cursor:pointer;margin-top:4px}
+.box{border:2px solid #FFD700;border-radius:20px;padding:15px;max-width:400px;margin:15px auto;background:#111}
+.bill{background:#000;border:1px solid #FFD700;border-radius:10px;padding:10px;font-size:13px;line-height:1.7;margin-top:10px;text-align:left}
+.bill b{color:#FFD700}
+.code{background:#000;border:2px dashed #FFD700;padding:8px;border-radius:8px;text-align:center}
+.code b{color:#FFD700;font-size:20px}
+footer{color:#777;font-size:11px;padding:12px;border-top:2px solid #FFD700}
+footer a{color:#777;text-decoration:none}
+.whats{position:fixed;bottom:16px;right:16px;background:#25D366;color:#fff;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:24px;z-index:50}
+#adminPanel{display:none;position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,.97);z-index:999;padding:16px;overflow:auto;text-align:left}
+#adminPanel:target{display:block}
+input,select{width:100%;padding:10px;margin:5px 0;border-radius:8px;border:1px solid #444;background:#000;color:#fff;box-sizing:border-box}
+.numGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:12px 0}
+.numBtn{padding:16px 0;background:#222;color:#fff;border:2px solid #FFD700;border-radius:12px;font-size:20px;font-weight:900;cursor:pointer}
+.numBtn.selected{background:#FFD700;color:#000;transform:scale(1.1)}
+.numBtn:disabled{opacity:0.4}
+.luckyBtn{width:100%;padding:14px;background:#FFD700;color:#000;border:none;border-radius:30px;font-size:18px;font-weight:900;cursor:pointer}
+.luckyBtn:disabled{background:#555;color:#999}
+.bigNum{font-size:60px;font-weight:900;color:#FFD700;margin:10px 0}
+.flower{position:fixed;top:-40px;z-index:9999;font-size:28px;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0.8}}
+</style></head>
+<body>
+<div class="top"><a href="tel:03427529146">Call Now</a><a href="https://wa.me/923427529146">WhatsApp</a><a href="https://maps.google.com/?q=Insha+Pizza+Point+Ichhra+Lahore">Location</a><a href="https://www.google.com/maps/search/Insha+Pizza+Point+Lahore">5 Star Review</a></div>
+<h1>INSHA PIZZA POINT - LAHORE</h1>
+<p style="font-size:11px;color:#aaa">Owner Shoaib | 11 AM - 2 AM | Free Delivery Ichhra, Mazang</p>
+<h3>Our Deals - Deal 1 to 11</h3>
+<div class="card"><img src="https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=400"><div><b>Deal 1: Combo-1</b><br><span>1 Zinger + Fries + Drink</span><br><span class="price">Rs.600</span><br><button class="obtn" onclick="window.open('https://wa.me/923427529146?text=Salam Bhai Mujhe Deal 1 Order Karna Hai','_blank')">Order</button></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400"><div><b>Deal 2: Combo-2</b><br><span>1 Tower Burger + Fries + 500ml</span><br><span class="price">Rs.800</span><br><button class="obtn" onclick="window.open('https://wa.me/923427529146?text=Salam Bhai Mujhe Deal 2 Order Karna Hai','_blank')">Order</button></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400"><div><b>Deal 3: Combo-3</b><br><span>2 Zinger + 1.5 Ltr</span><br><span class="price">Rs.2000</span><br><button class="obtn" onclick="window.open('https://wa.me/923427529146?text=Salam Bhai Mujhe Deal 3 Order Karna Hai','_blank')">Order</button></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400"><div><b>Deal 4: Combo-4</b><br><span>1 Broast Piece + Fries + Drink</span><br><span class="price">Rs.800</span><br><button class="obtn" onclick="window.open('https://wa.me/923427529146?text=Salam Bhai Mujhe Deal 4 Order Karna Hai','_blank')">Order</button></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400"><div><b>Deal 5: Combo-5</b><br><span>3 Zinger + 3 Pcs + Wings + Fries</span><br><span class="price">Rs.2650</span><br><button class="obtn" onclick="window.open('https://wa.me/923427529146?text=Salam Bhai Mujhe Deal 5 Order Karna Hai','_blank')">Order</button></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400"><div><b>Deal 6: Combo-6</b><br><span>1 Reg Pizza + Zinger + Shawarma</span><br><span class="price">Rs.1450</span><br><button class="obtn" onclick="window.open('https://wa.me/923427529146?text=Salam Bhai Mujhe Deal 6 Order Karna Hai','_blank')">Order</button></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400"><div><b>Deal 7: Combo-7</b><br><span>1 Med Pizza + Zinger + Shawarma</span><br><span class="price">Rs.1800</span><br><button class="obtn" onclick="window.open('https://wa.me/923427529146?text=Salam Bhai Mujhe Deal 7 Order Karna Hai','_blank')">Order</button></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400"><div><b>Deal 8: Combo-8</b><br><span>1 Large Pizza + Wings + Zinger</span><br><span class="price">Rs.2500</span><br><button class="obtn" onclick="window.open('https://wa.me/923427529146?text=Salam Bhai Mujhe Deal 8 Order Karna Hai','_blank')">Order</button></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400"><div><b>Deal 9: Family-1</b><br><span>1 Reg Pizza + 2 Zinger + 2 Pcs + 1.5Ltr</span><br><span class="price">Rs.1700</span><br><button class="obtn" onclick="window.open('https://wa.me/923427529146?text=Salam Bhai Mujhe Deal 9 Order Karna Hai','_blank')">Order</button></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400"><div><b>Deal 10: Family-2</b><br><span>1 Large Rahat Special + 2 Zinger + 1.5Ltr</span><br><span class="price">Rs.2600</span><br><button class="obtn" onclick="window.open('https://wa.me/923427529146?text=Salam Bhai Mujhe Deal 10 Order Karna Hai','_blank')">Order</button></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400"><div><b>Deal 11: Family-3</b><br><span>5 Zinger + 20 Wings + 1.5Ltr</span><br><span class="price">Rs.3200</span><br><button class="obtn" onclick="window.open('https://wa.me/923427529146?text=Salam Bhai Mujhe Deal 11 Order Karna Hai','_blank')">Order</button></div></div>
+
+<div class="box">
+<h3>🍀 Lucky Number - Apna Lucky Number Chunain!</h3>
+<p style="font-size:12px;color:#aaa">24 ghante me sirf 1 baar! Number mil gaya to JACKPOT!</p>
+<p id="luckyTimer" style="font-size:12px;color:#FFD700;display:none"></p>
+<div style="background:#000;border:2px solid #FFD700;border-radius:15px;padding:12px">
+<p style="font-size:13px;margin:0">Apna Lucky Number Chunain (1 - 10):</p>
+<div class="numGrid" id="numGrid"></div>
+<div id="luckyResult" style="font-size:16px;font-weight:900;min-height:24px;color:#FFD700">Number chun kar TRY dabayen!</div>
+<div id="luckyNumShow" class="bigNum" style="display:none">?</div>
+<div id="luckyCodeBox" class="code" style="display:none;margin-top:8px">Apna Code: <b id="luckyCodeText">----</b><br><span style="font-size:11px;color:#aaa">Screenshot le lein</span></div>
+<button id="luckyBtn" class="luckyBtn" onclick="tryLucky()">🍀 TRY MY LUCK!</button>
+<p style="font-size:11px;color:#aaa;margin-top:8px">Number Match = FREE PIZZA 🍕 | Aas paas wala Number (1 ka farq) = 15% OFF | Baqi sab = 5% OFF</p>
+</div>
+<input id="sName" placeholder="Your Name *">
+<input id="sPhone" placeholder="WhatsApp Number *">
+<select id="dealSelect" onchange="updateBill()">
+<option value="">Select Deal Number *</option>
+<option value="Deal 1|600">Deal 1 - Rs.600</option>
+<option value="Deal 2|800">Deal 2 - Rs.800</option>
+<option value="Deal 3|2000">Deal 3 - Rs.2000</option>
+<option value="Deal 4|800">Deal 4 - Rs.800</option>
+<option value="Deal 5|2650">Deal 5 - Rs.2650</option>
+<option value="Deal 6|1450">Deal 6 - Rs.1450</option>
+<option value="Deal 7|1800">Deal 7 - Rs.1800</option>
+<option value="Deal 8|2500">Deal 8 - Rs.2500</option>
+<option value="Deal 9|1700">Deal 9 - Rs.1700</option>
+<option value="Deal 10|2600">Deal 10 - Rs.2600</option>
+<option value="Deal 11|3200">Deal 11 - Rs.3200</option>
+</select>
+<input id="sLocation" placeholder="Your Location / Address *" oninput="updateBill()">
+<div id="billBox" class="bill" style="display:none"></div>
+<div id="luckyClaim" style="display:none;margin-top:10px">
+<button onclick="claimLucky()" style="width:100%;padding:12px;background:#25D366;color:#fff;border:none;border-radius:20px;font-weight:900">Claim on WhatsApp</button>
+</div>
+</div>
+<script>
+var selectedNum=0;
+var grid=document.getElementById('numGrid');
+for(var n=1;n<=10;n++){(function(num){var b=document.createElement('button');b.className='numBtn';b.innerText=num;b.onclick=function(){selectedNum=num;var all=document.querySelectorAll('.numBtn');for(var i=0;i<all.length;i++)all[i].classList.remove('selected');b.classList.add('selected');};grid.appendChild(b);})(n);}
+function flowerRain(){var flowers=['🌸','🌹','🌺','💐','🌷','🎉','✨','🍕','🍀'];for(var i=0;i<50;i++){(function(){var f=document.createElement('div');f.className='flower';f.innerText=flowers[Math.floor(Math.random()*flowers.length)];f.style.left=(Math.random()*95)+'vw';f.style.animationDuration=(2+Math.random()*2)+'s';f.style.animationDelay=(Math.random()*0.8)+'s';f.style.fontSize=(20+Math.random()*20)+'px';document.body.appendChild(f);setTimeout(function(){f.remove();},5000);})();}}
+function updateBill(){var v=document.getElementById('dealSelect').value;var box=document.getElementById('billBox');if(!v||!window._luckyWin){box.style.display='none';return;}var parts=v.split('|');var dname=parts[0];var orig=parseInt(parts[1]);var winStr=window._luckyWin||'';var pct=0;var isFreePizza=false;if(winStr.indexOf('Free Pizza')!==-1){isFreePizza=true;}else{var m=winStr.match(/(\d+)/);if(m)pct=parseInt(m[1]);}var disc=Math.round(orig*pct/100);var after=orig-disc;var loc=document.getElementById('sLocation').value.toLowerCase();var del=0;if(loc.indexOf('ichhra')===-1&&loc.indexOf('ichra')===-1&&loc.indexOf('mazang')===-1&&loc!==''){del=150;}var total=after+del;window._total=total;window._deal=dname;var html='Deal: '+dname+'<br>Original: Rs.'+orig+'<br>';if(isFreePizza){html+='Inaam: <b>Free Pizza (Small)</b> - Deal ke saath Free milega<br>';}else{html+='Discount ('+winStr+'): - Rs.'+disc+'<br>After Discount: Rs.'+after+'<br>';}html+='Delivery: '+(del===0?'<b>FREE (Ichhra / Mazang)</b>':'Rs.'+del)+'<br><hr><b>Total to Pay: Rs.'+total+'</b> (Cash on Delivery)';box.style.display='block';box.innerHTML=html;}
+function claimLucky(){var n=document.getElementById('sName').value;var p=document.getElementById('sPhone').value;var d=document.getElementById('dealSelect').value;var l=document.getElementById('sLocation').value;if(!n||!p||!d||!l){alert('Name, Phone, Deal, Location bharein');return;}try{var codes=JSON.parse(localStorage.getItem('insha_codes')||'[]');for(var i=codes.length-1;i>=0;i--){if(String(codes[i].code)===String(window._luckyCode)){codes[i].name=n;codes[i].phone=p;codes[i].deal=window._deal||d;codes[i].total=window._total;codes[i].location=l;break;}}localStorage.setItem('insha_codes',JSON.stringify(codes));var all=JSON.parse(localStorage.getItem('insha_shop_data')||'[]');all.push({name:n,phone:p,win:window._luckyWin,code:window._luckyCode,deal:window._deal||d,total:window._total,location:l,date:new Date().toLocaleString(),used:false});localStorage.setItem('insha_shop_data',JSON.stringify(all));}catch(e){}window.open('https://wa.me/923427529146?text=Salam Shoaib Bhai%0AMain ne Lucky Number jeeta hai%0AName: '+encodeURIComponent(n)+'%0APhone: '+encodeURIComponent(p)+'%0AMy Number: '+selectedNum+'%0AWin: '+encodeURIComponent(window._luckyWin||'')+'%0ACode: '+window._luckyCode+'%0ADeal: '+encodeURIComponent(window._deal||d)+'%0ATotal: Rs.'+(window._total||'')+'%0ALocation: '+encodeURIComponent(l),'_blank');}
+var luckyLocked=false;
+(function(){try{var last=parseInt(localStorage.getItem('insha_last_lucky')||'0');if(last && Date.now()-last < 24*60*60*1000){luckyLocked=true;var left=24*60*60*1000-(Date.now()-last);var h=Math.floor(left/3600000);var m=Math.floor((left%3600000)/60000);var t=document.getElementById('luckyTimer');t.style.display='block';t.innerText='Aap ne aaj try kar liya hai. Agla try '+h+'h '+m+'m baad milega.';document.getElementById('luckyBtn').disabled=true;document.getElementById('luckyBtn').innerText='LOCKED - KAL AAYEN';document.getElementById('luckyResult').innerText='Kal dobara aayen!';}}catch(e){}})();
+function tryLucky(){
+if(luckyLocked){alert('Aaj ka try ho chuka hai, kal aayen!');return;}
+if(!selectedNum){alert('Pehle apna Lucky Number chunain (1-10)');return;}
+document.getElementById('luckyBtn').disabled=true;document.getElementById('luckyBtn').innerText='DEKHTE HAIN...';
+var show=document.getElementById('luckyNumShow');show.style.display='block';
+var cnt=0;var iv=setInterval(function(){show.innerText=Math.floor(1+Math.random()*10);cnt++;if(cnt>15){clearInterval(iv);finishLucky();}},100);
+}
+function finishLucky(){
+var luckyNum=Math.floor(1+Math.random()*10);
+document.getElementById('luckyNumShow').innerText=luckyNum;
+var win='';
+if(selectedNum===luckyNum){win='JACKPOT - Free Pizza';}
+else if(Math.abs(selectedNum-luckyNum)===1){win='15% OFF';}
+else{win='5% OFF';}
+var code=Math.floor(1000+Math.random()*9000);
+window._luckyWin=win;window._luckyCode=code;
+try{var codes=JSON.parse(localStorage.getItem('insha_codes')||'[]');codes.push({code:code,win:win,date:new Date().toLocaleString(),used:false,name:'',phone:'',deal:'Lucky Number - My:'+selectedNum+' Lucky:'+luckyNum,total:'',location:''});localStorage.setItem('insha_codes',JSON.stringify(codes));localStorage.setItem('insha_last_lucky',Date.now().toString());}catch(e){}
+document.getElementById('luckyResult').innerText='Lucky Number tha '+luckyNum+' - Aap ko '+win+' mila!';
+document.getElementById('luckyCodeBox').style.display='block';
+document.getElementById('luckyCodeText').innerText=code;
+document.getElementById('luckyClaim').style.display='block';
+document.getElementById('luckyBtn').innerText='HO GAYA - KAL PHIR AAYEN';
+flowerRain();
+updateBill();
+}
+</script>
+<footer><a href="#adminPanel">Insha Pizza Point - 0342-7529146 | 0335-4277240 | Ichhra, Lahore</a></footer>
+<a href="https://wa.me/923427529146" class="whats">Chat</a>
+<div id="adminPanel"><div style="background:#1a1a1a;border:2px solid #FFD700;border-radius:14px;padding:18px;max-width:680px;margin:10px auto">
+<h2 style="color:#FFD700;text-align:center">Admin Panel - Insha Pizza Point</h2>
+<div id="loginBox"><input type="password" id="adminPass" placeholder="Password" style="width:100%;padding:12px;background:#000;color:#fff;border:1px solid #444;border-radius:10px;box-sizing:border-box">
+<button onclick="var v=document.getElementById('adminPass').value; v=v.replace(/ /g,''); if(v==='1218'){document.getElementById('loginBox').style.display='none';document.getElementById('dataBox').style.display='block'; try{var codes=JSON.parse(localStorage.getItem('insha_codes')||'[]'); document.getElementById('totalCount').innerText='Total Codes (Lucky): '+codes.length; var h=''; for(var i=codes.length-1;i>=0;i--){var r=codes[i]; h+='<div style=\'border-bottom:1px solid #333;padding:8px\'>Code: <b style=\'color:#FFD700\'>'+r.code+'</b> | Win: '+r.win+' | '+(r.deal||'Lucky')+' | '+(r.used?'USED':'Fresh')+'<br>'+(r.name?('Name: '+r.name+' | Phone: '+r.phone+'<br>'):'Abhi Claim nahi kiya<br>')+'<span style=\'color:#888\'>'+r.date+'</span></div>';} if(codes.length==0){h='<div style=\'padding:10px;color:#aaa\'>Abhi kisi ne try nahi kiya.</div>';} document.getElementById('dataList').innerHTML=h;}catch(e){document.getElementById('dataList').innerHTML='Data load nahi hua';}}else{alert('Wrong Password!');}" style="width:100%;margin-top:8px;padding:12px;background:#FFD700;border:none;border-radius:30px;font-weight:900">Login</button>
+<a href="#" style="display:block;text-align:center;margin-top:8px;padding:10px;background:#333;color:#fff;border-radius:30px;text-decoration:none">Close</a></div>
+<div id="dataBox" style="display:none">
+<h3 id="totalCount" style="color:#FFD700"></h3>
+<div style="background:#000;border:2px solid #25D366;border-radius:12px;padding:12px;margin:12px 0">
+<h3 style="color:#25D366;font-size:15px;margin:0 0 8px 0">Verify Lucky Code</h3>
+<input id="verifyInput" placeholder="4 digit code likhein" style="width:68%;padding:12px;background:#111;color:#fff;border:1px solid #444;border-radius:8px;box-sizing:border-box">
+<button onclick="var c=document.getElementById('verifyInput').value; c=c.replace(/ /g,''); var res=document.getElementById('verifyResult'); if(!c){res.innerHTML='Code likhein pehle'; return;} try{var codes=JSON.parse(localStorage.getItem('insha_codes')||'[]'); var f=null; for(var i=0;i<codes.length;i++){if(String(codes[i].code)===c){f=codes[i]; break;}} if(!f){res.innerHTML='<div style=\'background:#5a0000;padding:10px;border-radius:8px\'><b>INVALID CODE! Jali hai.</b></div>'; return;} if(f.used){res.innerHTML='<div style=\'background:#5a3a00;padding:10px;border-radius:8px\'><b>YE CODE PEHLE HI USE HO CHUKA HAI!</b></div>'; return;} res.innerHTML='<div style=\'background:#003d1a;padding:10px;border-radius:8px\'><b style=\'color:#25D366;font-size:16px\'>VALID! Discount dein.</b><br>Code: '+f.code+'<br>Win: '+f.win+'<br>'+(f.name?('Name: '+f.name+'<br>Phone: '+f.phone+'<br>'):'')+'Date: '+f.date+'</div><button onclick=\'try{var cc=JSON.parse(localStorage.getItem(&quot;insha_codes&quot;)||&quot;[]&quot;); for(var i=0;i<cc.length;i++){if(String(cc[i].code)===&quot;'+c+'&quot;){cc[i].used=true;}} localStorage.setItem(&quot;insha_codes&quot;,JSON.stringify(cc)); document.getElementById(&quot;verifyResult&quot;).innerHTML+=\&quot;<div style=background:#FFD700;color:#000;padding:8px;border-radius:8px;margin-top:8px;font-weight:bold;text-align:center>Ho gaya! USED mark ho gaya.</div>\&quot;;}catch(e){}\' style=\'width:100%;margin-top:8px;padding:10px;background:#FFD700;border:none;border-radius:20px;font-weight:900\'>Is Code Ko USED Mark Karein</button>';}catch(e){res.innerHTML='Error: '+e.message;}" style="padding:12px 14px;background:#25D366;color:#fff;border:none;border-radius:8px;font-weight:800">Verify</button>
+<div id="verifyResult" style="margin-top:10px;font-size:13px"></div>
+</div>
+<div style="background:#000;border:2px solid #FF4444;border-radius:12px;padding:12px;margin:12px 0">
+<h3 style="color:#FF4444;font-size:14px;margin:0 0 8px 0">Lucky Reset - Admin Only</h3>
+<button onclick="if(confirm('Lucky reset karein?')){try{localStorage.removeItem('insha_last_lucky');}catch(e){} alert('Ho gaya! Lucky Reset ho gaya.'); location.hash=''; location.reload();}" style="width:100%;padding:12px;background:#FF4444;color:#fff;border:none;border-radius:20px;font-weight:900">RESET LUCKY (24H Lock Kholein)</button>
+</div>
+<div><button onclick="if(confirm('Sara data clear karein?')){localStorage.removeItem('insha_shop_data');localStorage.removeItem('insha_codes');localStorage.removeItem('insha_last_lucky');location.reload();}" style="padding:8px 14px;background:#b00;color:#fff;border:none;border-radius:20px;font-weight:800">Clear All Data</button><a href="#" style="display:inline-block;padding:8px 14px;background:#333;color:#fff;border-radius:20px;text-decoration:none">Close</a></div>
+<div id="dataList" style="max-height:55vh;overflow:auto;margin-top:10px;font-size:12px"></div>
+</div>
+</div></div>
+</body></html>
